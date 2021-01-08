@@ -1,4 +1,4 @@
-var connection = require("../config/connection");
+var connection = require("../config/connection.js");
 
 function createQmarks(num) {
     var arr = [];
@@ -24,7 +24,7 @@ function translateSql(ob) {
 
 var orm = {
     selectAll: function(table, cb) {
-        var dbQuery = "SELECT * FROM" + table + ";";
+        var dbQuery = "SELECT * FROM " + table + ";";
 
         connection.query(dbQuery, function(err, res) {
             if (err) {
@@ -35,7 +35,7 @@ var orm = {
     },
     insertOne: function(table, cols, vals, cb) {
         var dbQuery =
-            "INSERT INTO" +
+            "INSERT INTO " +
             table +
             " (" +
             cols.toString() +
@@ -51,11 +51,10 @@ var orm = {
             }
             cb(res);
         });
-    }
-
-        updateOne: function(table, objColVals, condition, cb) {
+    },
+    updateOne: function(table, objColVals, condition, cb) {
         var dbQuery =
-            "UPDATE" +
+            "UPDATE " +
             table +
             " SET " +
             translateSql(objColVals) +
@@ -63,7 +62,8 @@ var orm = {
             condition;
 
         console.log(dbQuery);
-        connection.query(dbQuery, vals, function(err, res) {
+
+        connection.query(dbQuery, function(err, res) {
             if (err) {
                 throw err;
             }
@@ -74,12 +74,12 @@ var orm = {
         var dbQuery = "DELETE FROM " + table + " WHERE " + condition;
         console.log(dbQuery);
 
-        connection.query(dbQuery, vals, function(err, res) {
+        connection.query(dbQuery, function(err, res) {
             if (err) {
                 throw err;
             }
             cb(res);
         });
-    },
-
+    }
 };
+module.exports = orm;

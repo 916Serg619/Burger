@@ -18,8 +18,10 @@ $(function() {
         });
     });
 
-    $(".eataburger").on("click", function(event) {
+    $(".eatburger").on("click", function(event) {
         event.preventDefault();
+
+        console.log("*******event listenr for put route hooking");
 
         var id = $(this).data("id");
         var devouredState = {
