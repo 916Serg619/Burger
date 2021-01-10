@@ -1,5 +1,5 @@
 var orm = require("../config/orm.js");
-
+//Call back orm functions and create model//
 var burger = {
     selectAll: function(cb) {
         orm.selectAll("burgers", function(res) {

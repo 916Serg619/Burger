@@ -1,3 +1,4 @@
+--Create Database and Table(s).  Copy/Paste into MySQL--
 CREATE DATABASE burgers_db;
 USE burgers_db;
 

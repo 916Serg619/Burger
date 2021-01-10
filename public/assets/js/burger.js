@@ -1,3 +1,4 @@
+//Create on-click, submit, and delete events using ajax //
 $(function() {
     $(".create-form").on("submit", function(event) {
         event.preventDefault();
@@ -24,14 +25,14 @@ $(function() {
         console.log("*******event listenr for put route hooking");
 
         var id = $(this).data("id");
-        var devouredState = {
+        var devouredBurger = {
             devoured: 1
         };
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
-            data: devouredState
+            data: devouredBurger
         }).then(function() {
-            console.log("Burger devoured");
+            console.log("You Devoured the Burger!!!!!!!!");
             location.reload();
         });
     });

@@ -1,0 +1,70 @@
+ body {
+     background-color: #000000;
+ }
+ 
+ .jumbotron {
+     background-color: #000000;
+     color: #ffffff;
+     margin-top: 3%;
+     font-family: 'Yellowtail', cursive;
+     font-size: 2em;
+     text-align: center;
+     ;
+ }
+ 
+ #newburger {
+     color: #5c5c5c;
+     border-radius: 5%;
+ }
+ 
+ #leftside.panel-heading,
+ #rightside.panel-heading {
+     background-color: #000000;
+ }
+ 
+ #leftside {
+     background-color: #000000;
+     color: white;
+     text-align: center;
+     font-size: 2em;
+     font-family: 'Yellowtail', cursive;
+ }
+ 
+ #rightside {
+     background-color: #000000;
+     color: white;
+     text-align: center;
+     font-size: 2em;
+     font-family: 'Yellowtail', cursive;
+ }
+ 
+ span {
+     font-family: 'Yellowtail', cursive;
+ }
+ 
+ strong {
+     color: white;
+ }
+ 
+ ul {
+     font-size: 2em;
+     ;
+ }
+ 
+ .glow {
+     font-size: 45px;
+     color: #fff;
+     text-align: center;
+     -webkit-animation: glow 1s ease-in-out infinite alternate;
+     -moz-animation: glow 1s ease-in-out infinite alternate;
+     animation: glow 1s ease-in-out infinite alternate;
+ }
+ 
+ @-webkit-keyframes glow {
+     from {
+         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+     }
+     to {
+         text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+     }
+ }

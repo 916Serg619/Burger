@@ -2,7 +2,7 @@ var express = require("express");
 var burger = require("../models/burger.js");
 
 var router = express.Router();
-
+//Create Routes to aqcuire index and data//
 router.get("/", function(req, res) {
     burger.selectAll(function(data) {
         var hdbrsObj = {
@@ -13,7 +13,7 @@ router.get("/", function(req, res) {
     });
 
     router.post("/api/burgers", function(req, res) {
-        console.log("*************Posting burger");
+        console.log("Posting burger");
         burger.insertOne(
             ["burger_name", "devoured"], [req.body.burger_name, req.body.devoured],
             function(result) {
@@ -23,7 +23,7 @@ router.get("/", function(req, res) {
         );
     });
     router.put("/api/burgers/:id", function(req, res) {
-        console.log("*************Updating burger", req.params.id);
+        console.log("Updating burger", req.params.id);
         var condition = "id = " + req.params.id;
 
         console.log("condition", condition);

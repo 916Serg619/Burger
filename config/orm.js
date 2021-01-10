@@ -1,5 +1,5 @@
 var connection = require("../config/connection.js");
-
+//Function that creates an array, and returns it as a string//
 function createQmarks(num) {
     var arr = [];
     for (var i = 0; i < num; i++) {
@@ -7,7 +7,7 @@ function createQmarks(num) {
     }
     return arr.toString();
 }
-
+//Function to translate the string into SQL data//
 function translateSql(ob) {
     var arr = [];
     for (var key in ob) {
@@ -21,7 +21,7 @@ function translateSql(ob) {
     }
     return arr.toString();
 }
-
+//Create Orm Functions to communicate with MySQL//
 var orm = {
     selectAll: function(table, cb) {
         var dbQuery = "SELECT * FROM " + table + ";";
